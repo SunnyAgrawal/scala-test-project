@@ -2,6 +2,7 @@ val springBootVersion = "2.5.5"
 val jacksonVersion = "2.13.0"
 
 Global / onChangedBuildSource := ReloadOnSourceChanges
+Global / dependencyCheckFormats := Seq("HTML", "SARIF")
 
 lazy val root = project
   .in(file("."))

@@ -1,4 +1,0 @@
-[0m[[0m[0mdebug[0m] [0m[0mCopy resource mappings: [0m
-[0m[[0m[0mdebug[0m] [0m[0m	(/Users/sn/Downloads/scala3-example-project-main/scala-test-project/src/main/resources/banner.txt,/Users/sn/Downloads/scala3-example-project-main/scala-test-project/target/scala-3.0.2/classes/banner.txt)[0m
-[0m[[0m[0mdebug[0m] [0m[0m	(/Users/sn/Downloads/scala3-example-project-main/scala-test-project/src/main/resources/application-prod.yml,/Users/sn/Downloads/scala3-example-project-main/scala-test-project/target/scala-3.0.2/classes/application-prod.yml)[0m
-[0m[[0m[0mdebug[0m] [0m[0m	(/Users/sn/Downloads/scala3-example-project-main/scala-test-project/src/main/resources/application.yml,/Users/sn/Downloads/scala3-example-project-main/scala-test-project/target/scala-3.0.2/classes/application.yml)[0m
