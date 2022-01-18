@@ -18,14 +18,15 @@ jobs:
       with:
         java-version: '11'
         distribution: 'temurin'
+
     - name: Run dependency check
       run: sbt dependencyCheckAggregate
 
-    - name: Upload Trivy scan results to GitHub Security tab
-      uses: github/codeql-action/upload-sarif@v1
-      id: dependecyreport
-      with:
-        sarif_file: 'target/scala-3.0.2/dependency-check-report.sarif'
+#    - name: Upload Trivy scan results to GitHub Security tab
+#      uses: github/codeql-action/upload-sarif@v1
+#      id: dependecyreport
+#      with:
+#        sarif_file: 'target/scala-3.0.2/dependency-check-report.sarif'
 
     - name: Run Trivy vulnerability scanner in repo mode
       uses: aquasecurity/trivy-action@master
