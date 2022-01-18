@@ -1,61 +1,61 @@
-# Example sbt project that compiles using Scala 3
+# spring-boot-scala
 
-[![Continuous Integration](https://github.com/scala/scala3-example-project/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/scala/scala3-example-project/actions/workflows/ci.yml)
+## About
+This is an example project on how to set up a [Spring Boot](https://projects.spring.io/spring-boot/) microservice using [Scala](https://www.scala-lang.org/) and [SBT](http://www.scala-sbt.org/).
+Furthermore, some adjustments are made to the project configuration so that the project is easily exportable to
+different formats like a [Docker](https://www.docker.com/) image, zip, rpm, deb, zip, msi or dmg.
+The awesome [sbt-native-packager](http://sbt-native-packager.readthedocs.io/en/stable/) plugin is used for that.
 
-## Usage
+The idea behind this project is simply to show the few specialities in syntax when using the Java-centric Spring
+framework with Scala, especially in regard of annotations and dependency injection.
 
-This is a normal sbt project, you can compile code with `sbt compile` and run it
-with `sbt run`, `sbt console` will start a Scala 3 REPL.
+Also you don't have to be afraid to mix Scala and Java code which is shown by sharing the service instance with two
+controllers, one implemented in Scala, the other in Java.
 
-If compiling this example project fails, you probably have a global sbt plugin
-that does not work with Scala 3, try to disable all plugins in
-`~/.sbt/1.0/plugins` and `~/.sbt/1.0`.
+Just browse the code, it's only a few files and lines. :)
 
-### IDE support
+## Prerequisites
+The project was developed with the following versions but other version might also work.
+* Java 8
+* SBT 0.13.15
 
-Scala 3 comes built-in with IDE support, to try it out see
-[IDE support for Scala 3](http://dotty.epfl.ch/docs/usage/ide-support.html)
+Additionally, for the containerization features you need
+* Docker 17.06.0-ce
+* docker-compose 1.14.0
 
-## Making a new Scala 3 project
+## The service
+The application will boot up a Spring Boot application, exposing two request handlers under the path `http://localhost:8080/test` and
+`http://localhost:8080/testjava`.
 
-The fastest way to start a new Scala 3 project is to use one of the following templates:
+A configuration instance of type *MyServiceConfiguration* is created and a configuration key is loaded from the file
+*application.yml* and injected into the configuration instance by Spring. This configuration instance is provided to the
+service instance of class *MyService*.
 
-* [Minimal Scala 3 project](https://github.com/scala/scala3.g8)
-* [Scala 3 project that cross-compiles with Scala 2](https://github.com/scala/scala3-cross.g8)
+The service provides one method that simply returns a simple string and the value loaded from the configuration.
 
-## Using Scala 3 in an existing project
+The request handlers are defined in the Scala class *MyServiceController* and the Java class *MyServiceJavaController*.
+The instances receive the service instance via dependency injection. They call the service in their request handlers and
+return a string composed of a greeting message and the service call result (another String as mentioned above).
 
-You will need to make the following adjustments to your build:
+## Running
+There are different ways on how to execute the application.
 
-### project/build.properties
+* For quick testing, you can simply call `sbt run` on the command line. On the first time, this will download all
+required dependencies. Then the main class of the application is executed and the Spring Boot application is started.
+This way of running the application is only recommended for development purposes since the whole application is started
+in the same JVM that SBT is running in, which you would not want to happen in a production environment.
+* In order to compile the project, package it and let SBT generate a startup-script, execute `sbt universal:stage`.
+In the folder *target/universal/stage* you find the result. You have a *lib* folder containing all dependencies and a
+*bin* folder that contains the automatically generated startup-scripts.
+Execute `bin/springbootscala` on Linux and Mac or `bin/springbootscala.bat` on Windows.
 
-```
-sbt.version=1.6.1
-```
+## Containerization
+You can easily create a Docker image from the project by calling `sbt docker:publishLocal`. This will create a Docker
+image based on *openjdk:8-jre-alpine* image. The image is extended by adding all dependencies and the startup-scripts. Run the command
+`docker images` and you will see the image being available.
 
-You must use sbt 1.5.5 or newer; older versions of sbt are not supported.
+In order to start a container based on that image and expose port 8080 of the container to your local machine, simply
+execute `docker-compose up` in the project folder. There is a *docker-compose.yml* for that purpose.
 
-### build.sbt
-
-Set up the Scala 3 version:
-
-```scala
-scalaVersion := "3.1.0"
-```
-
-### Getting your project to compile with Scala 3
-
-For help with porting an existing Scala 2 project to Scala 3, see the
-[Scala 3 migration guide](https://scalacenter.github.io/scala-3-migration-guide/).
-
-#### Nightly builds
-
-If the latest release of Scala 3 is missing a bugfix or feature you need, you may
-wish to use a nightly build. Look at the bottom of the list of
-[releases](https://repo1.maven.org/maven2/org/scala-lang/scala3-compiler_3/)
-to find the version number for the latest nightly build.
-
-## Discuss
-
-Feel free to come chat with us on the
-[Scala 3 gitter](http://gitter.im/lampepfl/dotty)!
+## Further ideas
+* Definately check the *sbt-native-packager* plugin for other options how you can export the application.
