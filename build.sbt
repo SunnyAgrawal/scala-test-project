@@ -1,38 +1,45 @@
-/*
-  General Scala attributes
- */
-scalaVersion := "2.12.1"
+val springBootVersion = "2.5.5"
+val jacksonVersion = "2.13.0"
 
-/*
-  General project attributes
- */
-organization := "de.codecentric"
-name := "SpringBootScala"
-version := "0.1"
-maintainer := "Björn Jacobs <bjoern.jacobs@codecentric.de>"
-description := "A demo how to use Spring Boot with Scala for building a basic microservice"
-organizationHomepage := Some(url("http://www.codecentric.de"))
+Global / onChangedBuildSource := ReloadOnSourceChanges
 
-/*
-  Project dependencies
- */
-libraryDependencies ++= Seq(
-  "org.springframework.boot" % "spring-boot-starter-web" % "1.5.4.RELEASE",
-  "org.springframework.boot" % "spring-boot-configuration-processor" % "1.5.4.RELEASE"
-)
+lazy val root = project
+  .in(file("."))
+  .settings(
+    name := "spring-boot-scala-example",
+    version := "1.0.0-SNAPSHOT",
+    scalaVersion := "3.0.2",
+    assembly / mainClass := Some("spring.boot.scala.example.ExampleApp"),
+    assembly / assemblyJarName := "spring-boot-scala-example.jar",
+    libraryDependencies += "org.springframework.boot" % "spring-boot-starter-web" % springBootVersion
+      exclude ("org.springframework.boot", "spring-boot-starter-tomcat"),
+    libraryDependencies += "org.springframework.boot" % "spring-boot-starter-jetty" % springBootVersion,
+    libraryDependencies += "org.springframework.boot" % "spring-boot-starter-actuator" % springBootVersion,
+    libraryDependencies += "org.springframework.boot" % "spring-boot-starter-test" % springBootVersion % Test,
+    libraryDependencies += "com.fasterxml.jackson.core" % "jackson-databind" % jacksonVersion,
+    libraryDependencies += "com.fasterxml.jackson.core" % "jackson-annotations" % jacksonVersion,
+    libraryDependencies += "com.fasterxml.jackson.module" % "jackson-module-scala_2.13" % jacksonVersion,
+    libraryDependencies += "org.scalactic" %% "scalactic" % "3.2.10",
+    libraryDependencies += "org.scalatest" %% "scalatest" % "3.2.10" % Test,
+    libraryDependencies += "org.junit.jupiter" % "junit-jupiter-engine" % "5.8.1" % Test,
+    libraryDependencies += "net.aichler" % "jupiter-interface" % "0.9.1" % Test
+  )
 
-/*
-  Packaging plugin
- */
+ThisBuild / javacOptions ++= Seq("-source", "1.8")
+ThisBuild / resolvers += Resolver.jcenterRepo
 
-// enable the Java app packaging archetype and Ash script (for Alpine Linux, doesn't have Bash)
-enablePlugins(JavaAppPackaging, AshScriptPlugin)
-
-// set the main entrypoint to the application that is used in startup scripts
-mainClass in Compile := Some("de.codecentric.microservice.MyServiceApplication")
-
-// the Docker image to base on (alpine is smaller than the debian based one (120 vs 650 MB)
-dockerBaseImage := "openjdk:8-jre-alpine"
-
-// creates tag 'latest' as well when publishing
-dockerUpdateLatest := true
+ThisBuild / assemblyMergeStrategy := {
+  case PathList(ps @ _*) if ps.contains("module-info.class") =>
+    MergeStrategy.concat
+  case PathList("META-INF", "spring-configuration-metadata.json") =>
+    MergeStrategy.concat
+  case PathList("META-INF", "additional-spring-configuration-metadata.json") =>
+    MergeStrategy.concat
+  case PathList("META-INF", "spring.handlers")  => MergeStrategy.concat
+  case PathList("META-INF", "spring.schemas")   => MergeStrategy.concat
+  case PathList("META-INF", "spring.factories") => MergeStrategy.concat
+  case PathList("META-INF", "web-fragment.xml") => MergeStrategy.concat
+  case PathList("META-INF", "spring-autoconfigure-metadata.properties") =>
+    MergeStrategy.concat
+  case x => MergeStrategy.defaultMergeStrategy(x)
+}

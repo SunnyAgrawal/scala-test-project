@@ -1,0 +1,280 @@
+[0m[[0m[0minfo[0m] [0m[0mApplying project settings to DependencyCheck settings[0m
+[0m[[0m[0minfo[0m] [0m[0mRunning aggregate check for spring-boot-scala-example[0m
+[0m[[0m[0minfo[0m] [0m[0mAdding compile dependencies to check.[0m
+[0m[[0m[0minfo[0m] [0m[0m	scala3-library_3-3.0.2.jar[0m
+[0m[[0m[0minfo[0m] [0m[0m	spring-boot-starter-web-2.5.5.jar[0m
+[0m[[0m[0minfo[0m] [0m[0m	spring-boot-starter-jetty-2.5.5.jar[0m
+[0m[[0m[0minfo[0m] [0m[0m	spring-boot-starter-actuator-2.5.5.jar[0m
+[0m[[0m[0minfo[0m] [0m[0m	jackson-databind-2.13.0.jar[0m
+[0m[[0m[0minfo[0m] [0m[0m	jackson-annotations-2.13.0.jar[0m
+[0m[[0m[0minfo[0m] [0m[0m	jackson-module-scala_2.13-2.13.0.jar[0m
+[0m[[0m[0minfo[0m] [0m[0m	scalactic_3-3.2.10.jar[0m
+[0m[[0m[0minfo[0m] [0m[0m	scala-library-2.13.6.jar[0m
+[0m[[0m[0minfo[0m] [0m[0m	spring-boot-starter-2.5.5.jar[0m
+[0m[[0m[0minfo[0m] [0m[0m	spring-boot-starter-json-2.5.5.jar[0m
+[0m[[0m[0minfo[0m] [0m[0m	spring-web-5.3.10.jar[0m
+[0m[[0m[0minfo[0m] [0m[0m	spring-webmvc-5.3.10.jar[0m
+[0m[[0m[0minfo[0m] [0m[0m	jakarta.servlet-api-4.0.4.jar[0m
+[0m[[0m[0minfo[0m] [0m[0m	jakarta.websocket-api-1.1.2.jar[0m
+[0m[[0m[0minfo[0m] [0m[0m	tomcat-embed-el-9.0.53.jar[0m
+[0m[[0m[0minfo[0m] [0m[0m	jetty-servlets-9.4.43.v20210629.jar[0m
+[0m[[0m[0minfo[0m] [0m[0m	jetty-webapp-9.4.43.v20210629.jar[0m
+[0m[[0m[0minfo[0m] [0m[0m	websocket-server-9.4.43.v20210629.jar[0m
+[0m[[0m[0minfo[0m] [0m[0m	javax-websocket-server-impl-9.4.43.v20210629.jar[0m
+[0m[[0m[0minfo[0m] [0m[0m	spring-boot-actuator-autoconfigure-2.5.5.jar[0m
+[0m[[0m[0minfo[0m] [0m[0m	micrometer-core-1.7.4.jar[0m
+[0m[[0m[0minfo[0m] [0m[0m	jackson-core-2.13.0.jar[0m
+[0m[[0m[0minfo[0m] [0m[0m	paranamer-2.8.jar[0m
+[0m[[0m[0minfo[0m] [0m[0m	spring-boot-2.5.5.jar[0m
+[0m[[0m[0minfo[0m] [0m[0m	spring-boot-autoconfigure-2.5.5.jar[0m
+[0m[[0m[0minfo[0m] [0m[0m	spring-boot-starter-logging-2.5.5.jar[0m
+[0m[[0m[0minfo[0m] [0m[0m	jakarta.annotation-api-1.3.5.jar[0m
+[0m[[0m[0minfo[0m] [0m[0m	spring-core-5.3.10.jar[0m
+[0m[[0m[0minfo[0m] [0m[0m	snakeyaml-1.28.jar[0m
+[0m[[0m[0minfo[0m] [0m[0m	jackson-datatype-jdk8-2.12.5.jar[0m
+[0m[[0m[0minfo[0m] [0m[0m	jackson-datatype-jsr310-2.12.5.jar[0m
+[0m[[0m[0minfo[0m] [0m[0m	jackson-module-parameter-names-2.12.5.jar[0m
+[0m[[0m[0minfo[0m] [0m[0m	spring-beans-5.3.10.jar[0m
+[0m[[0m[0minfo[0m] [0m[0m	spring-aop-5.3.10.jar[0m
+[0m[[0m[0minfo[0m] [0m[0m	spring-context-5.3.10.jar[0m
+[0m[[0m[0minfo[0m] [0m[0m	spring-expression-5.3.10.jar[0m
+[0m[[0m[0minfo[0m] [0m[0m	jetty-continuation-9.4.43.v20210629.jar[0m
+[0m[[0m[0minfo[0m] [0m[0m	jetty-http-9.4.43.v20210629.jar[0m
+[0m[[0m[0minfo[0m] [0m[0m	jetty-util-9.4.43.v20210629.jar[0m
+[0m[[0m[0minfo[0m] [0m[0m	jetty-io-9.4.43.v20210629.jar[0m
+[0m[[0m[0minfo[0m] [0m[0m	jetty-xml-9.4.43.v20210629.jar[0m
+[0m[[0m[0minfo[0m] [0m[0m	jetty-servlet-9.4.43.v20210629.jar[0m
+[0m[[0m[0minfo[0m] [0m[0m	websocket-common-9.4.43.v20210629.jar[0m
+[0m[[0m[0minfo[0m] [0m[0m	websocket-client-9.4.43.v20210629.jar[0m
+[0m[[0m[0minfo[0m] [0m[0m	websocket-servlet-9.4.43.v20210629.jar[0m
+[0m[[0m[0minfo[0m] [0m[0m	jetty-annotations-9.4.43.v20210629.jar[0m
+[0m[[0m[0minfo[0m] [0m[0m	javax-websocket-client-impl-9.4.43.v20210629.jar[0m
+[0m[[0m[0minfo[0m] [0m[0m	spring-boot-actuator-2.5.5.jar[0m
+[0m[[0m[0minfo[0m] [0m[0m	HdrHistogram-2.1.12.jar[0m
+[0m[[0m[0minfo[0m] [0m[0m	LatencyUtils-2.0.3.jar[0m
+[0m[[0m[0minfo[0m] [0m[0m	logback-classic-1.2.6.jar[0m
+[0m[[0m[0minfo[0m] [0m[0m	log4j-to-slf4j-2.14.1.jar[0m
+[0m[[0m[0minfo[0m] [0m[0m	jul-to-slf4j-1.7.32.jar[0m
+[0m[[0m[0minfo[0m] [0m[0m	spring-jcl-5.3.10.jar[0m
+[0m[[0m[0minfo[0m] [0m[0m	jetty-security-9.4.43.v20210629.jar[0m
+[0m[[0m[0minfo[0m] [0m[0m	jetty-util-ajax-9.4.43.v20210629.jar[0m
+[0m[[0m[0minfo[0m] [0m[0m	websocket-api-9.4.43.v20210629.jar[0m
+[0m[[0m[0minfo[0m] [0m[0m	jetty-client-9.4.43.v20210629.jar[0m
+[0m[[0m[0minfo[0m] [0m[0m	jetty-plus-9.4.43.v20210629.jar[0m
+[0m[[0m[0minfo[0m] [0m[0m	asm-9.1.jar[0m
+[0m[[0m[0minfo[0m] [0m[0m	asm-commons-9.1.jar[0m
+[0m[[0m[0minfo[0m] [0m[0m	logback-core-1.2.6.jar[0m
+[0m[[0m[0minfo[0m] [0m[0m	slf4j-api-1.7.32.jar[0m
+[0m[[0m[0minfo[0m] [0m[0m	log4j-api-2.14.1.jar[0m
+[0m[[0m[0minfo[0m] [0m[0m	jetty-server-9.4.43.v20210629.jar[0m
+[0m[[0m[0minfo[0m] [0m[0m	asm-tree-9.1.jar[0m
+[0m[[0m[0minfo[0m] [0m[0m	asm-analysis-9.1.jar[0m
+[0m[[0m[0minfo[0m] [0m[0mRemoving provided dependencies to check.[0m
+[0m[[0m[0minfo[0m] [0m[0mAdding runtime dependencies to check.[0m
+[0m[[0m[0minfo[0m] [0m[0m	scala3-library_3-3.0.2.jar[0m
+[0m[[0m[0minfo[0m] [0m[0m	spring-boot-starter-web-2.5.5.jar[0m
+[0m[[0m[0minfo[0m] [0m[0m	spring-boot-starter-jetty-2.5.5.jar[0m
+[0m[[0m[0minfo[0m] [0m[0m	spring-boot-starter-actuator-2.5.5.jar[0m
+[0m[[0m[0minfo[0m] [0m[0m	jackson-databind-2.13.0.jar[0m
+[0m[[0m[0minfo[0m] [0m[0m	jackson-annotations-2.13.0.jar[0m
+[0m[[0m[0minfo[0m] [0m[0m	jackson-module-scala_2.13-2.13.0.jar[0m
+[0m[[0m[0minfo[0m] [0m[0m	scalactic_3-3.2.10.jar[0m
+[0m[[0m[0minfo[0m] [0m[0m	scala-library-2.13.6.jar[0m
+[0m[[0m[0minfo[0m] [0m[0m	spring-boot-starter-2.5.5.jar[0m
+[0m[[0m[0minfo[0m] [0m[0m	spring-boot-starter-json-2.5.5.jar[0m
+[0m[[0m[0minfo[0m] [0m[0m	spring-web-5.3.10.jar[0m
+[0m[[0m[0minfo[0m] [0m[0m	spring-webmvc-5.3.10.jar[0m
+[0m[[0m[0minfo[0m] [0m[0m	jakarta.servlet-api-4.0.4.jar[0m
+[0m[[0m[0minfo[0m] [0m[0m	jakarta.websocket-api-1.1.2.jar[0m
+[0m[[0m[0minfo[0m] [0m[0m	tomcat-embed-el-9.0.53.jar[0m
+[0m[[0m[0minfo[0m] [0m[0m	jetty-servlets-9.4.43.v20210629.jar[0m
+[0m[[0m[0minfo[0m] [0m[0m	jetty-webapp-9.4.43.v20210629.jar[0m
+[0m[[0m[0minfo[0m] [0m[0m	websocket-server-9.4.43.v20210629.jar[0m
+[0m[[0m[0minfo[0m] [0m[0m	javax-websocket-server-impl-9.4.43.v20210629.jar[0m
+[0m[[0m[0minfo[0m] [0m[0m	spring-boot-actuator-autoconfigure-2.5.5.jar[0m
+[0m[[0m[0minfo[0m] [0m[0m	micrometer-core-1.7.4.jar[0m
+[0m[[0m[0minfo[0m] [0m[0m	jackson-core-2.13.0.jar[0m
+[0m[[0m[0minfo[0m] [0m[0m	paranamer-2.8.jar[0m
+[0m[[0m[0minfo[0m] [0m[0m	spring-boot-2.5.5.jar[0m
+[0m[[0m[0minfo[0m] [0m[0m	spring-boot-autoconfigure-2.5.5.jar[0m
+[0m[[0m[0minfo[0m] [0m[0m	spring-boot-starter-logging-2.5.5.jar[0m
+[0m[[0m[0minfo[0m] [0m[0m	jakarta.annotation-api-1.3.5.jar[0m
+[0m[[0m[0minfo[0m] [0m[0m	spring-core-5.3.10.jar[0m
+[0m[[0m[0minfo[0m] [0m[0m	snakeyaml-1.28.jar[0m
+[0m[[0m[0minfo[0m] [0m[0m	jackson-datatype-jdk8-2.12.5.jar[0m
+[0m[[0m[0minfo[0m] [0m[0m	jackson-datatype-jsr310-2.12.5.jar[0m
+[0m[[0m[0minfo[0m] [0m[0m	jackson-module-parameter-names-2.12.5.jar[0m
+[0m[[0m[0minfo[0m] [0m[0m	spring-beans-5.3.10.jar[0m
+[0m[[0m[0minfo[0m] [0m[0m	spring-aop-5.3.10.jar[0m
+[0m[[0m[0minfo[0m] [0m[0m	spring-context-5.3.10.jar[0m
+[0m[[0m[0minfo[0m] [0m[0m	spring-expression-5.3.10.jar[0m
+[0m[[0m[0minfo[0m] [0m[0m	jetty-continuation-9.4.43.v20210629.jar[0m
+[0m[[0m[0minfo[0m] [0m[0m	jetty-http-9.4.43.v20210629.jar[0m
+[0m[[0m[0minfo[0m] [0m[0m	jetty-util-9.4.43.v20210629.jar[0m
+[0m[[0m[0minfo[0m] [0m[0m	jetty-io-9.4.43.v20210629.jar[0m
+[0m[[0m[0minfo[0m] [0m[0m	jetty-xml-9.4.43.v20210629.jar[0m
+[0m[[0m[0minfo[0m] [0m[0m	jetty-servlet-9.4.43.v20210629.jar[0m
+[0m[[0m[0minfo[0m] [0m[0m	websocket-common-9.4.43.v20210629.jar[0m
+[0m[[0m[0minfo[0m] [0m[0m	websocket-client-9.4.43.v20210629.jar[0m
+[0m[[0m[0minfo[0m] [0m[0m	websocket-servlet-9.4.43.v20210629.jar[0m
+[0m[[0m[0minfo[0m] [0m[0m	jetty-annotations-9.4.43.v20210629.jar[0m
+[0m[[0m[0minfo[0m] [0m[0m	javax-websocket-client-impl-9.4.43.v20210629.jar[0m
+[0m[[0m[0minfo[0m] [0m[0m	spring-boot-actuator-2.5.5.jar[0m
+[0m[[0m[0minfo[0m] [0m[0m	HdrHistogram-2.1.12.jar[0m
+[0m[[0m[0minfo[0m] [0m[0m	LatencyUtils-2.0.3.jar[0m
+[0m[[0m[0minfo[0m] [0m[0m	logback-classic-1.2.6.jar[0m
+[0m[[0m[0minfo[0m] [0m[0m	log4j-to-slf4j-2.14.1.jar[0m
+[0m[[0m[0minfo[0m] [0m[0m	jul-to-slf4j-1.7.32.jar[0m
+[0m[[0m[0minfo[0m] [0m[0m	spring-jcl-5.3.10.jar[0m
+[0m[[0m[0minfo[0m] [0m[0m	jetty-security-9.4.43.v20210629.jar[0m
+[0m[[0m[0minfo[0m] [0m[0m	jetty-util-ajax-9.4.43.v20210629.jar[0m
+[0m[[0m[0minfo[0m] [0m[0m	websocket-api-9.4.43.v20210629.jar[0m
+[0m[[0m[0minfo[0m] [0m[0m	jetty-client-9.4.43.v20210629.jar[0m
+[0m[[0m[0minfo[0m] [0m[0m	jetty-plus-9.4.43.v20210629.jar[0m
+[0m[[0m[0minfo[0m] [0m[0m	asm-9.1.jar[0m
+[0m[[0m[0minfo[0m] [0m[0m	asm-commons-9.1.jar[0m
+[0m[[0m[0minfo[0m] [0m[0m	logback-core-1.2.6.jar[0m
+[0m[[0m[0minfo[0m] [0m[0m	slf4j-api-1.7.32.jar[0m
+[0m[[0m[0minfo[0m] [0m[0m	log4j-api-2.14.1.jar[0m
+[0m[[0m[0minfo[0m] [0m[0m	jetty-server-9.4.43.v20210629.jar[0m
+[0m[[0m[0minfo[0m] [0m[0m	asm-tree-9.1.jar[0m
+[0m[[0m[0minfo[0m] [0m[0m	asm-analysis-9.1.jar[0m
+[0m[[0m[0minfo[0m] [0m[0mAdding test dependencies to check.[0m
+[0m[[0m[0minfo[0m] [0m[0mRemoving optional dependencies to check.[0m
+[0m[[0m[0minfo[0m] [0m[0mScanning following dependencies: [0m
+[0m[[0m[0minfo[0m] [0m[0m	spring-boot-actuator-autoconfigure-2.5.5.jar[0m
+[0m[[0m[0minfo[0m] [0m[0m	jetty-http-9.4.43.v20210629.jar[0m
+[0m[[0m[0minfo[0m] [0m[0m	jul-to-slf4j-1.7.32.jar[0m
+[0m[[0m[0minfo[0m] [0m[0m	spring-core-5.3.10.jar[0m
+[0m[[0m[0minfo[0m] [0m[0m	spring-boot-2.5.5.jar[0m
+[0m[[0m[0minfo[0m] [0m[0m	spring-boot-starter-web-2.5.5.jar[0m
+[0m[[0m[0minfo[0m] [0m[0m	log4j-api-2.14.1.jar[0m
+[0m[[0m[0minfo[0m] [0m[0m	jackson-module-parameter-names-2.12.5.jar[0m
+[0m[[0m[0minfo[0m] [0m[0m	jetty-io-9.4.43.v20210629.jar[0m
+[0m[[0m[0minfo[0m] [0m[0m	spring-boot-autoconfigure-2.5.5.jar[0m
+[0m[[0m[0minfo[0m] [0m[0m	spring-boot-starter-logging-2.5.5.jar[0m
+[0m[[0m[0minfo[0m] [0m[0m	spring-aop-5.3.10.jar[0m
+[0m[[0m[0minfo[0m] [0m[0m	HdrHistogram-2.1.12.jar[0m
+[0m[[0m[0minfo[0m] [0m[0m	tomcat-embed-el-9.0.53.jar[0m
+[0m[[0m[0minfo[0m] [0m[0m	spring-boot-starter-2.5.5.jar[0m
+[0m[[0m[0minfo[0m] [0m[0m	spring-boot-actuator-2.5.5.jar[0m
+[0m[[0m[0minfo[0m] [0m[0m	spring-boot-starter-json-2.5.5.jar[0m
+[0m[[0m[0minfo[0m] [0m[0m	jackson-datatype-jdk8-2.12.5.jar[0m
+[0m[[0m[0minfo[0m] [0m[0m	jackson-datatype-jsr310-2.12.5.jar[0m
+[0m[[0m[0minfo[0m] [0m[0m	websocket-servlet-9.4.43.v20210629.jar[0m
+[0m[[0m[0minfo[0m] [0m[0m	snakeyaml-1.28.jar[0m
+[0m[[0m[0minfo[0m] [0m[0m	jetty-continuation-9.4.43.v20210629.jar[0m
+[0m[[0m[0minfo[0m] [0m[0m	spring-context-5.3.10.jar[0m
+[0m[[0m[0minfo[0m] [0m[0m	websocket-common-9.4.43.v20210629.jar[0m
+[0m[[0m[0minfo[0m] [0m[0m	spring-jcl-5.3.10.jar[0m
+[0m[[0m[0minfo[0m] [0m[0m	slf4j-api-1.7.32.jar[0m
+[0m[[0m[0minfo[0m] [0m[0m	jackson-databind-2.13.0.jar[0m
+[0m[[0m[0minfo[0m] [0m[0m	spring-beans-5.3.10.jar[0m
+[0m[[0m[0minfo[0m] [0m[0m	websocket-client-9.4.43.v20210629.jar[0m
+[0m[[0m[0minfo[0m] [0m[0m	spring-webmvc-5.3.10.jar[0m
+[0m[[0m[0minfo[0m] [0m[0m	micrometer-core-1.7.4.jar[0m
+[0m[[0m[0minfo[0m] [0m[0m	jetty-security-9.4.43.v20210629.jar[0m
+[0m[[0m[0minfo[0m] [0m[0m	jackson-module-scala_2.13-2.13.0.jar[0m
+[0m[[0m[0minfo[0m] [0m[0m	jetty-servlet-9.4.43.v20210629.jar[0m
+[0m[[0m[0minfo[0m] [0m[0m	websocket-server-9.4.43.v20210629.jar[0m
+[0m[[0m[0minfo[0m] [0m[0m	websocket-api-9.4.43.v20210629.jar[0m
+[0m[[0m[0minfo[0m] [0m[0m	LatencyUtils-2.0.3.jar[0m
+[0m[[0m[0minfo[0m] [0m[0m	javax-websocket-client-impl-9.4.43.v20210629.jar[0m
+[0m[[0m[0minfo[0m] [0m[0m	log4j-to-slf4j-2.14.1.jar[0m
+[0m[[0m[0minfo[0m] [0m[0m	logback-classic-1.2.6.jar[0m
+[0m[[0m[0minfo[0m] [0m[0m	logback-core-1.2.6.jar[0m
+[0m[[0m[0minfo[0m] [0m[0m	jackson-core-2.13.0.jar[0m
+[0m[[0m[0minfo[0m] [0m[0m	jakarta.websocket-api-1.1.2.jar[0m
+[0m[[0m[0minfo[0m] [0m[0m	jetty-server-9.4.43.v20210629.jar[0m
+[0m[[0m[0minfo[0m] [0m[0m	jetty-client-9.4.43.v20210629.jar[0m
+[0m[[0m[0minfo[0m] [0m[0m	asm-commons-9.1.jar[0m
+[0m[[0m[0minfo[0m] [0m[0m	spring-expression-5.3.10.jar[0m
+[0m[[0m[0minfo[0m] [0m[0m	asm-tree-9.1.jar[0m
+[0m[[0m[0minfo[0m] [0m[0m	asm-analysis-9.1.jar[0m
+[0m[[0m[0minfo[0m] [0m[0m	scala-library-2.13.6.jar[0m
+[0m[[0m[0minfo[0m] [0m[0m	jakarta.annotation-api-1.3.5.jar[0m
+[0m[[0m[0minfo[0m] [0m[0m	jetty-util-ajax-9.4.43.v20210629.jar[0m
+[0m[[0m[0minfo[0m] [0m[0m	jetty-plus-9.4.43.v20210629.jar[0m
+[0m[[0m[0minfo[0m] [0m[0m	jetty-webapp-9.4.43.v20210629.jar[0m
+[0m[[0m[0minfo[0m] [0m[0m	spring-boot-starter-actuator-2.5.5.jar[0m
+[0m[[0m[0minfo[0m] [0m[0m	jetty-servlets-9.4.43.v20210629.jar[0m
+[0m[[0m[0minfo[0m] [0m[0m	jetty-util-9.4.43.v20210629.jar[0m
+[0m[[0m[0minfo[0m] [0m[0m	spring-boot-starter-jetty-2.5.5.jar[0m
+[0m[[0m[0minfo[0m] [0m[0m	asm-9.1.jar[0m
+[0m[[0m[0minfo[0m] [0m[0m	jakarta.servlet-api-4.0.4.jar[0m
+[0m[[0m[0minfo[0m] [0m[0m	scala3-library_3-3.0.2.jar[0m
+[0m[[0m[0minfo[0m] [0m[0m	jetty-xml-9.4.43.v20210629.jar[0m
+[0m[[0m[0minfo[0m] [0m[0m	javax-websocket-server-impl-9.4.43.v20210629.jar[0m
+[0m[[0m[0minfo[0m] [0m[0m	scalactic_3-3.2.10.jar[0m
+[0m[[0m[0minfo[0m] [0m[0m	paranamer-2.8.jar[0m
+[0m[[0m[0minfo[0m] [0m[0m	jackson-annotations-2.13.0.jar[0m
+[0m[[0m[0minfo[0m] [0m[0m	spring-web-5.3.10.jar[0m
+[0m[[0m[0minfo[0m] [0m[0m	jetty-annotations-9.4.43.v20210629.jar[0m
+[0m[[0m[0mdebug[0m] [0m[0mScanning tomcat-embed-el 9.0.53[0m
+[0m[[0m[0mdebug[0m] [0m[0mScanning jackson-annotations 2.13.0[0m
+[0m[[0m[0mdebug[0m] [0m[0mScanning asm 9.1[0m
+[0m[[0m[0mdebug[0m] [0m[0mScanning jetty-xml 9.4.43.v20210629[0m
+[0m[[0m[0mdebug[0m] [0m[0mScanning jackson-core 2.13.0[0m
+[0m[[0m[0mdebug[0m] [0m[0mScanning spring-boot 2.5.5[0m
+[0m[[0m[0mdebug[0m] [0m[0mScanning spring-context 5.3.10[0m
+[0m[[0m[0mdebug[0m] [0m[0mScanning jackson-datatype-jsr310 2.12.5[0m
+[0m[[0m[0mdebug[0m] [0m[0mScanning jackson-module-scala_2.13 2.13.0[0m
+[0m[[0m[0mdebug[0m] [0m[0mScanning spring-boot-starter-web 2.5.5[0m
+[0m[[0m[0mdebug[0m] [0m[0mScanning jul-to-slf4j 1.7.32[0m
+[0m[[0m[0mdebug[0m] [0m[0mScanning spring-webmvc 5.3.10[0m
+[0m[[0m[0mdebug[0m] [0m[0mScanning spring-boot-autoconfigure 2.5.5[0m
+[0m[[0m[0mdebug[0m] [0m[0mScanning jetty-security 9.4.43.v20210629[0m
+[0m[[0m[0mdebug[0m] [0m[0mScanning jetty-servlets 9.4.43.v20210629[0m
+[0m[[0m[0mdebug[0m] [0m[0mScanning jetty-io 9.4.43.v20210629[0m
+[0m[[0m[0mdebug[0m] [0m[0mScanning jetty-server 9.4.43.v20210629[0m
+[0m[[0m[0mdebug[0m] [0m[0mScanning websocket-servlet 9.4.43.v20210629[0m
+[0m[[0m[0mdebug[0m] [0m[0mScanning javax-websocket-server-impl 9.4.43.v20210629[0m
+[0m[[0m[0mdebug[0m] [0m[0mScanning scala3-library_3 3.0.2[0m
+[0m[[0m[0mdebug[0m] [0m[0mScanning asm-tree 9.1[0m
+[0m[[0m[0mdebug[0m] [0m[0mScanning scalactic_3 3.2.10[0m
+[0m[[0m[0mdebug[0m] [0m[0mScanning spring-core 5.3.10[0m
+[0m[[0m[0mdebug[0m] [0m[0mScanning asm-analysis 9.1[0m
+[0m[[0m[0mdebug[0m] [0m[0mScanning spring-aop 5.3.10[0m
+[0m[[0m[0mdebug[0m] [0m[0mScanning websocket-client 9.4.43.v20210629[0m
+[0m[[0m[0mdebug[0m] [0m[0mScanning spring-boot-actuator-autoconfigure 2.5.5[0m
+[0m[[0m[0mdebug[0m] [0m[0mScanning jetty-webapp 9.4.43.v20210629[0m
+[0m[[0m[0mdebug[0m] [0m[0mScanning javax-websocket-client-impl 9.4.43.v20210629[0m
+[0m[[0m[0mdebug[0m] [0m[0mScanning jetty-annotations 9.4.43.v20210629[0m
+[0m[[0m[0mdebug[0m] [0m[0mScanning scala-library 2.13.6[0m
+[0m[[0m[0mdebug[0m] [0m[0mScanning spring-jcl 5.3.10[0m
+[0m[[0m[0mdebug[0m] [0m[0mScanning spring-boot-starter-json 2.5.5[0m
+[0m[[0m[0mdebug[0m] [0m[0mScanning paranamer 2.8[0m
+[0m[[0m[0mdebug[0m] [0m[0mScanning websocket-server 9.4.43.v20210629[0m
+[0m[[0m[0mdebug[0m] [0m[0mScanning spring-boot-starter-actuator 2.5.5[0m
+[0m[[0m[0mdebug[0m] [0m[0mScanning logback-classic 1.2.6[0m
+[0m[[0m[0mdebug[0m] [0m[0mScanning spring-web 5.3.10[0m
+[0m[[0m[0mdebug[0m] [0m[0mScanning jetty-client 9.4.43.v20210629[0m
+[0m[[0m[0mdebug[0m] [0m[0mScanning log4j-api 2.14.1[0m
+[0m[[0m[0mdebug[0m] [0m[0mScanning jetty-http 9.4.43.v20210629[0m
+[0m[[0m[0mdebug[0m] [0m[0mScanning log4j-to-slf4j 2.14.1[0m
+[0m[[0m[0mdebug[0m] [0m[0mScanning websocket-api 9.4.43.v20210629[0m
+[0m[[0m[0mdebug[0m] [0m[0mScanning jakarta.annotation-api 1.3.5[0m
+[0m[[0m[0mdebug[0m] [0m[0mScanning spring-boot-starter-logging 2.5.5[0m
+[0m[[0m[0mdebug[0m] [0m[0mScanning spring-beans 5.3.10[0m
+[0m[[0m[0mdebug[0m] [0m[0mScanning jetty-util 9.4.43.v20210629[0m
+[0m[[0m[0mdebug[0m] [0m[0mScanning jakarta.servlet-api 4.0.4[0m
+[0m[[0m[0mdebug[0m] [0m[0mScanning spring-boot-starter 2.5.5[0m
+[0m[[0m[0mdebug[0m] [0m[0mScanning logback-core 1.2.6[0m
+[0m[[0m[0mdebug[0m] [0m[0mScanning LatencyUtils 2.0.3[0m
+[0m[[0m[0mdebug[0m] [0m[0mScanning jackson-databind 2.13.0[0m
+[0m[[0m[0mdebug[0m] [0m[0mScanning asm-commons 9.1[0m
+[0m[[0m[0mdebug[0m] [0m[0mScanning spring-boot-starter-jetty 2.5.5[0m
+[0m[[0m[0mdebug[0m] [0m[0mScanning jetty-servlet 9.4.43.v20210629[0m
+[0m[[0m[0mdebug[0m] [0m[0mScanning micrometer-core 1.7.4[0m
+[0m[[0m[0mdebug[0m] [0m[0mScanning jackson-module-parameter-names 2.12.5[0m
+[0m[[0m[0mdebug[0m] [0m[0mScanning spring-boot-actuator 2.5.5[0m
+[0m[[0m[0mdebug[0m] [0m[0mScanning slf4j-api 1.7.32[0m
+[0m[[0m[0mdebug[0m] [0m[0mScanning jetty-continuation 9.4.43.v20210629[0m
+[0m[[0m[0mdebug[0m] [0m[0mScanning jetty-plus 9.4.43.v20210629[0m
+[0m[[0m[0mdebug[0m] [0m[0mScanning websocket-common 9.4.43.v20210629[0m
+[0m[[0m[0mdebug[0m] [0m[0mScanning HdrHistogram 2.1.12[0m
+[0m[[0m[0mdebug[0m] [0m[0mScanning jetty-util-ajax 9.4.43.v20210629[0m
+[0m[[0m[0mdebug[0m] [0m[0mScanning jackson-datatype-jdk8 2.12.5[0m
+[0m[[0m[0mdebug[0m] [0m[0mScanning jakarta.websocket-api 1.1.2[0m
+[0m[[0m[0mdebug[0m] [0m[0mScanning snakeyaml 1.28[0m
+[0m[[0m[0mdebug[0m] [0m[0mScanning spring-expression 5.3.10[0m

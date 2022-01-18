@@ -1,61 +1,120 @@
-# spring-boot-scala
+# Spring Boot Scala Example
 
-## About
-This is an example project on how to set up a [Spring Boot](https://projects.spring.io/spring-boot/) microservice using [Scala](https://www.scala-lang.org/) and [SBT](http://www.scala-sbt.org/).
-Furthermore, some adjustments are made to the project configuration so that the project is easily exportable to
-different formats like a [Docker](https://www.docker.com/) image, zip, rpm, deb, zip, msi or dmg.
-The awesome [sbt-native-packager](http://sbt-native-packager.readthedocs.io/en/stable/) plugin is used for that.
+[![Build](https://github.com/jecklgamis/spring-boot-scala-example/actions/workflows/build.yml/badge.svg)](https://github.com/jecklgamis/spring-boot-scala-example/actions/workflows/build.yml)
 
-The idea behind this project is simply to show the few specialities in syntax when using the Java-centric Spring
-framework with Scala, especially in regard of annotations and dependency injection.
+This is an example Spring Boot app using Scala.
 
-Also you don't have to be afraid to mix Scala and Java code which is shown by sharing the service instance with two
-controllers, one implemented in Scala, the other in Java.
+Docker run:
+```
+docker run -p 8080:8080 jecklgamis/spring-boot-scala-example:latest
+```
 
-Just browse the code, it's only a few files and lines. :)
+What's In the Box?
 
-## Prerequisites
-The project was developed with the following versions but other version might also work.
-* Java 8
-* SBT 0.13.15
+* Scala 3
+* Maven and SBT build
+* Ubuntu Docker image
+* Jetty web container
+* HTTPS listener (prod profile) using self-signed certs
+* JUnit5 tests
+* Actuator endpoints (health, metrics)
+* Build info, liveness and readiness probe endpoints
+* Example Kubernetes deployment
 
-Additionally, for the containerization features you need
-* Docker 17.06.0-ce
-* docker-compose 1.14.0
+This is a **Github Template** project. You can create a copy of this project from a clean slate. Simply click
+<kbd>Use this template</kbd> button.
 
-## The service
-The application will boot up a Spring Boot application, exposing two request handlers under the path `http://localhost:8080/test` and
-`http://localhost:8080/testjava`.
+## Building
+Ensure you have Java 8, Docker, and Make installed.
 
-A configuration instance of type *MyServiceConfiguration* is created and a configuration key is loaded from the file
-*application.yml* and injected into the configuration instance by Spring. This configuration instance is provided to the
-service instance of class *MyService*.
-
-The service provides one method that simply returns a simple string and the value loaded from the configuration.
-
-The request handlers are defined in the Scala class *MyServiceController* and the Java class *MyServiceJavaController*.
-The instances receive the service instance via dependency injection. They call the service in their request handlers and
-return a string composed of a greeting message and the service call result (another String as mentioned above).
+```
+make all
+```
+This will create build info, keystore, executable jar, and Docker image in one go. Explore the `Makefile` for details.
 
 ## Running
-There are different ways on how to execute the application.
 
-* For quick testing, you can simply call `sbt run` on the command line. On the first time, this will download all
-required dependencies. Then the main class of the application is executed and the Spring Boot application is started.
-This way of running the application is only recommended for development purposes since the whole application is started
-in the same JVM that SBT is running in, which you would not want to happen in a production environment.
-* In order to compile the project, package it and let SBT generate a startup-script, execute `sbt universal:stage`.
-In the folder *target/universal/stage* you find the result. You have a *lib* folder containing all dependencies and a
-*bin* folder that contains the automatically generated startup-scripts.
-Execute `bin/springbootscala` on Linux and Mac or `bin/springbootscala.bat` on Windows.
+Run using Docker:
+```bash
+make run
+```
 
-## Containerization
-You can easily create a Docker image from the project by calling `sbt docker:publishLocal`. This will create a Docker
-image based on *openjdk:8-jre-alpine* image. The image is extended by adding all dependencies and the startup-scripts. Run the command
-`docker images` and you will see the image being available.
+Run using executable jar:
+```bash
+java -jar target/spring-boot-scala-example.jar
+```
 
-In order to start a container based on that image and expose port 8080 of the container to your local machine, simply
-execute `docker-compose up` in the project folder. There is a *docker-compose.yml* for that purpose.
+## Endpoints
+Point your browser to the urls below or use `curl` in command line.
+```bash
+curl http://localhost:8080/
+curl http://localhost:8080/buildInfo
+curl http://localhost:8080/probe/live
+curl http://localhost:8080/probe/ready
+curl http://localhost:8080/actuator/metrics
+curl http://localhost:8080/actuator/health
+```
+or you can run `./smoke-tests.sh`
 
-## Further ideas
-* Definately check the *sbt-native-packager* plugin for other options how you can export the application.
+## Building With [SBT](https://www.scala-sbt.org/)
+
+Ensure you have SBT installed.
+
+Mac OS:
+```bash
+brew install sbt
+```
+
+Build executable jar:
+```bash
+sbt assembly
+```
+
+Run main class:
+```bash
+sbt run
+```
+
+To build interactively, enter the SBT shell by typing `sbt`. You should then
+be able to compile, test,  assemble, or run any other `sbt` commands.
+
+## Deploying To Kubernetes
+In this example, the Docker image is built locally and pushed to Docker Hub.
+
+Assumptions:
+* You have access to a Kubernetes cluster and can pull image from Docker Hub
+* You can push to a Docker registry (Docker Hub in this case)
+* You have Python 3 installed. This is used to generate versioned Kubernetes deployment file
+
+Install Python 3 in Mac OS:
+```bash
+brew install python@3
+pip3 install jinja2
+```
+
+Build and push Docker image:
+```bash
+make all push
+```
+
+Create a deployment file:
+```bash
+cd deployment/k8s && ./create-k8s-files.py --version $(git rev-parse HEAD)
+```
+
+Deploy:
+```bash
+kubectl apply -f deployment/k8s/deployment-$(git rev-parse HEAD).yaml
+```
+
+If all goes well, you should be able to see your pod using `kubectl get pods`
+
+Delete:
+```bash
+kubectl delete -f deployment/k8s/deployment-$(git rev-parse HEAD).yaml
+```
+
+TIP: `make deploy` does all these commands in one go. 
+
+## Contributing
+Please raise issue or pull request! Thanks!
