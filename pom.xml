@@ -15,7 +15,7 @@
     </parent>
 
     <properties>
-        <scala.version>3.0.2</scala.version>
+        <scala.version>3.1.0</scala.version>
         <jackson.version>2.11.3</jackson.version>
     </properties>
 
